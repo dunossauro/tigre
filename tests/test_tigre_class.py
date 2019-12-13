@@ -7,10 +7,10 @@ class TestTigreClassStaticAttributes(TestCase):
         self.tigre = Tigre()
 
     def test_should_has_empty_caps(self):
-        self.assertEqual(self.tigre.caps, {})
+        self.assertEqual(self.tigre._caps, {})
 
     def test_should_has_empty_fixed_caps(self):
-        self.assertEqual(self.tigre.fixed_caps, {})
+        self.assertEqual(self.tigre._fixed_caps, {})
 
     def test_should_has_empty_capabilities_property(self):
         self.assertEqual(self.tigre.capabilities, {})
@@ -52,19 +52,19 @@ class TestTigreClassDynamicAttributes(TestCase):
         tigre = Tigre()
         tigre.version(None)
 
-        self.assertIn('version', tigre.caps)
+        self.assertIn('version', tigre.capabilities)
 
     def test_closure_should_convert_non_booleans_caps(self):
         tigre = Tigre(default_caps=['version'])
         tigre.version(7)
 
-        self.assertEqual(tigre.caps['version'], '7')
+        self.assertEqual(tigre.capabilities['version'], '7')
 
     def test_closure_shouldnt_convert_booleans_caps(self):
         tigre = Tigre(default_caps=['enableVNC'])
         tigre.vnc(True)
 
-        self.assertIn(True, tigre.caps.values())
+        self.assertIn(True, tigre.capabilities.values())
 
     def test_should_raises_with_wrog_caps(self):
         tigre = Tigre(default_caps=[])
@@ -74,6 +74,6 @@ class TestTigreClassDynamicAttributes(TestCase):
 
     def test_should_return_value_if_was_fixed(self):
         tigre = Tigre()
-        tigre.fixed_caps = {'batatinha': 123}
+        tigre._fixed_caps = {'batatinha': 123}
 
         self.assertEqual(tigre.batatinha, 123)
