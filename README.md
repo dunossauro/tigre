@@ -64,8 +64,10 @@ example using remote webdriver.
 >>> from tigre.remote import firefox
 
 # complex definition enabling vnc and video recorder on firefox 70.0
->>> ff = firefox.version(70.0).vnc(True).resolution('800x600').video(True)
-ff.capabilities
+>>> ff = firefox.version(70.0).vnc(True).resolution('800x600').video(True).build()
+<selenium.webdriver.remote.webdriver.WebDriver (session="38f70e50-6009-4623-8969-34a9331ebf0a")>
+
+>>> ff.capabilities
 {'browserName': 'firefox', 'version': '70.0', 'enableVNC': True, 'screenResolution': '800x600', 'enableVideo': True}
 ```
 
