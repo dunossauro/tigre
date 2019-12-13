@@ -3,10 +3,12 @@ from tigre.core import Tigre
 from importlib import import_module
 from re import match, split
 
+browsers_regex = r'(firefox|chrome|opera)\d{,2}?'
+
 
 def __getattr__(attr: str) -> Union[Tigre, ImportError]:
-    if match(r'(firefox|chrome)\d{,3}?', attr):
-        *_, browser, version = split(r'^(firefox|chrome|opera)\d{,2}?', attr)
+    if match(browsers_regex, attr):
+        *_, browser, version = split(browsers_regex, attr)
         webdriver = import_module('tigre.remote.webdrivers')
         browser = getattr(webdriver, browser)
         return browser().version(version) if version else browser()
