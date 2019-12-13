@@ -28,3 +28,52 @@ Tiger is a helper to instantiate your [selenium webdriver](https://selenium.dev/
 - [docker-android](https://github.com/budtmo/docker-android)
   - grid
   - standalone
+
+
+## TODO
+
+- Grid tools
+  - [x] standalone
+  - [x] docker-selenium
+  - [x] selenoid
+  - [ ] zalenium
+
+- Webdriver features
+  - [x] Remote webdrivers
+  - [ ] Local webdrivers
+  - [ ] Android webdrivers
+  - [ ] iOS webdrivers
+  - [ ] Test using paid tools (EX: SauceLabs)
+
+- Continuous integration stuff
+  - [ ] Python 3.7
+  - [ ] Python 3.8
+  - [ ] Docker integration
+
+- Documentation
+  - [ ] Start mkdocs
+
+- more a lot of things
+
+## Simple example
+
+example using remote webdriver.
+
+```python
+>>> from tigre.remote import firefox
+
+# complex definition enabling vnc and video recorder on firefox 70.0
+>>> ff = firefox.version(70.0).vnc(True).resolution('800x600').video(True)
+ff.capabilities
+{'browserName': 'firefox', 'version': '70.0', 'enableVNC': True, 'screenResolution': '800x600', 'enableVideo': True}
+```
+
+## Dynamic importing example
+```python
+>>> from tigre.remote import firefox70
+
+# complex definition enabling vnc and video recorder on firefox 70.0
+>>> ff = firefox.vnc(True).resolution('800x600').video(True)
+ff.capabilities
+{'browserName': 'firefox', 'version': '70', 'enableVNC': True, 'screenResolution': '800x600', 'enableVideo': True}
+```
