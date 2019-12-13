@@ -2,11 +2,11 @@
 from typing import Any, Callable, Union
 from selenium import webdriver
 from tigre.core.meta import Builder
-from tigre.core.helpers import CAPATILITIES, attr_to_caps
+from tigre.core.helpers import CAPABILITIES, attr_to_caps
 
 
 class Tigre(Builder):
-    def __init__(self, default_caps: list = CAPATILITIES):
+    def __init__(self, default_caps: list = CAPABILITIES):
         self.default_caps = default_caps
         self.caps = {}
         self.fixed_caps = {}

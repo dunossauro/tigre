@@ -1,5 +1,6 @@
 from collections import defaultdict
-CAPATILITIES = ['version', 'enableVNC', 'enableVideo', 'screenResolution']
+
+CAPABILITIES = ['version', 'enableVNC', 'enableVideo', 'screenResolution']
 
 
 def attr_to_caps(attr: str) -> str:
