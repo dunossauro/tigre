@@ -1,4 +1,4 @@
-# Tigre
+# Tigre  :tiger:
 
 Tiger is a helper to instantiate your [selenium webdriver](https://selenium.dev/documentation/en/webdriver/) at the right time.
 
@@ -37,6 +37,7 @@ Tiger is a helper to instantiate your [selenium webdriver](https://selenium.dev/
   - [x] docker-selenium
   - [x] selenoid
   - [ ] zalenium
+  - [ ] Authentication :fire:
 
 - Webdriver features
   - [x] Remote webdrivers
