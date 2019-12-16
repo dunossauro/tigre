@@ -1,6 +1,6 @@
 # Tigre  :tiger:
 
-Tiger is a helper to instantiate your [selenium webdriver](https://selenium.dev/documentation/en/webdriver/) at the right time.
+Tigre is a helper to instantiate your [selenium webdriver](https://selenium.dev/documentation/en/webdriver/) at the right time.
 
 ## Motivation
 
