@@ -2,3 +2,7 @@ site_name: Tigre
 
 theme:
   name: 'material'
+markdown_extensions:
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - codehilite
