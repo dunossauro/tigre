@@ -1,5 +1,5 @@
 """Tigre."""
-from typing import Any, Callable, Union, Dict
+from typing import Any, Callable, Union
 from selenium import webdriver
 from tigre.core import config
 from tigre.core.meta import Builder
@@ -8,6 +8,7 @@ from tigre.core.helpers import CAPABILITIES, attr_to_caps
 
 class Tigre(Builder):
     """Tigre base class."""
+
     def __init__(self, default_caps: list = CAPABILITIES):
         self._default_caps = default_caps
         self._caps = {}
