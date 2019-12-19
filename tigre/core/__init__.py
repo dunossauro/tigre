@@ -1,11 +1,13 @@
 """Tigre."""
-from typing import Any, Callable, Union
+from typing import Any, Callable, Union, Dict
 from selenium import webdriver
+from tigre.core import config
 from tigre.core.meta import Builder
 from tigre.core.helpers import CAPABILITIES, attr_to_caps
 
 
 class Tigre(Builder):
+    """Tigre base class."""
     def __init__(self, default_caps: list = CAPABILITIES):
         self._default_caps = default_caps
         self._caps = {}
@@ -36,10 +38,13 @@ class Tigre(Builder):
         """
         Build a remote selenium remote webdriver using maked capabilities.
 
-        TODO: think about how to parameterize the URL
+        # NOTE: to set correct command_executor you can use config, like
+
+        >>> from tigre import config
+        >>> config.remote_url = 'my_remote_grid_url'
         """
         return webdriver.Remote(
-            command_executor="http://localhost:4444/wd/hub",
+            command_executor=config.remote_url,
             desired_capabilities={**self._fixed_caps, **self._caps},
         )
 

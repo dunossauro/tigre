@@ -1,5 +1,6 @@
 from unittest import TestCase, mock
 from tigre.core import Tigre
+from tests.helpers.config import config_wrapper
 
 
 class TestTigreClassStaticAttributes(TestCase):
@@ -18,15 +19,6 @@ class TestTigreClassStaticAttributes(TestCase):
     def test_should_existis_capabilities_on_representation(self):
         self.assertEqual(
             str(self.tigre), 'Tigre(caps={})'
-        )
-
-    @mock.patch('selenium.webdriver.Remote')
-    def test_build_should_call_selenium(self, mock):
-        self.tigre.build()
-
-        mock.assert_called_with(
-            command_executor="http://localhost:4444/wd/hub",
-            desired_capabilities={}
         )
 
 
@@ -77,3 +69,27 @@ class TestTigreClassDynamicAttributes(TestCase):
         tigre._fixed_caps = {'batatinha': 123}
 
         self.assertEqual(tigre.batatinha, 123)
+
+
+class TestTigreBuild(TestCase):
+    def setUp(self):
+        self.tigre = Tigre()
+
+    @mock.patch('selenium.webdriver.Remote')
+    def test_should_call_selenium_with_default_url(self, mock):
+        self.tigre.build()
+
+        mock.assert_called_with(
+            command_executor='http://localhost:4444/wd/hub',
+            desired_capabilities={}
+        )
+
+    @mock.patch('selenium.webdriver.Remote')
+    def test_should_call_selenium_with_configurantion_modified(self, mock):
+        with config_wrapper('remote_url', 'test_url'):
+            self.tigre.build()
+
+        mock.assert_called_with(
+            command_executor='test_url',
+            desired_capabilities={}
+        )
