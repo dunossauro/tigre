@@ -14,4 +14,4 @@ class TestBuilder(TestCase):
             ...
 
         with self.assertRaises(TypeError):
-            b = BuilderTest()
+            BuilderTest()
