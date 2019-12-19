@@ -17,9 +17,7 @@ class TestTigreClassStaticAttributes(TestCase):
         self.assertEqual(self.tigre.capabilities, {})
 
     def test_should_existis_capabilities_on_representation(self):
-        self.assertEqual(
-            str(self.tigre), 'Tigre(caps={})'
-        )
+        self.assertEqual(str(self.tigre), 'Tigre(caps={})')
 
 
 class TestTigreClassDynamicAttributes(TestCase):
@@ -81,7 +79,7 @@ class TestTigreBuild(TestCase):
 
         mock.assert_called_with(
             command_executor='http://localhost:4444/wd/hub',
-            desired_capabilities={}
+            desired_capabilities={},
         )
 
     @mock.patch('selenium.webdriver.Remote')
@@ -90,6 +88,5 @@ class TestTigreBuild(TestCase):
             self.tigre.build()
 
         mock.assert_called_with(
-            command_executor='test_url',
-            desired_capabilities={}
+            command_executor='test_url', desired_capabilities={}
         )

@@ -11,20 +11,14 @@ class TestRemoteModuleImports(TestCase):
         from tigre.remote import firefox99
 
         self.assertEqual(
-            firefox99.capabilities, {
-                'browserName': 'firefox',
-                'version': '99'
-            }
+            firefox99.capabilities, {'browserName': 'firefox', 'version': '99'}
         )
 
     def test_should_import_firefox_with_version_3(self):
         from tigre.remote import firefox3
 
         self.assertEqual(
-            firefox3.capabilities, {
-                'browserName': 'firefox',
-                'version': '3'
-            }
+            firefox3.capabilities, {'browserName': 'firefox', 'version': '3'}
         )
 
     def test_should_import_chome(self):

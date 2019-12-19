@@ -7,10 +7,7 @@ class TestFirefoxCapabilities(TestCase):
         self.browser = firefox()
 
     def test_should_has_version_capability(self):
-        self.assertEqual(
-            self.browser.capabilities,
-            {"browserName": "firefox"}
-        )
+        self.assertEqual(self.browser.capabilities, {"browserName": "firefox"})
 
 
 class TestOperaCapabilities(TestCase):
@@ -18,10 +15,7 @@ class TestOperaCapabilities(TestCase):
         self.browser = opera()
 
     def test_should_has_version_capability(self):
-        self.assertEqual(
-            self.browser.capabilities,
-            {"browserName": "opera"}
-        )
+        self.assertEqual(self.browser.capabilities, {"browserName": "opera"})
 
 
 class TestChromeCapabilities(TestCase):
@@ -29,7 +23,4 @@ class TestChromeCapabilities(TestCase):
         self.browser = chrome()
 
     def test_should_has_version_capability(self):
-        self.assertEqual(
-            self.browser.capabilities,
-            {"browserName": "chrome"}
-        )
+        self.assertEqual(self.browser.capabilities, {"browserName": "chrome"})
