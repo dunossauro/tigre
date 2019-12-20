@@ -53,13 +53,47 @@ Clone this repository and in root directory run
 
 This command will install (or update) all pyproject.toml dependencies inside a virtual environment.
 
-
 ## Docker environment
 
-### Running up Selenium Grid using Docker and docker-compose
+With Docker initialized you can follow one of these steps below.
+
+### Running up Selenium Grid 
 
 Go to `docker_test_images` folder and using Docker and docker-compose you can run the test image with the following command:
 
     docker-compose -f docker-selenium-browsers.yaml up
 
 Open a browser and go to `localhost:4444` to see if Selenium Grid Console is correctly up.
+
+### Running up Selenoid
+
+First, install Selenoid following the (oficial docs)[https://aerokube.com/selenoid/latest/].
+
+After installing, run
+
+    ./cm selenoid start --vnc
+
+To use Selenoid UI, also run
+
+    ./cm selenoid-ui start 
+
+Now, open a browser in `localhost:8080` and you'll see Selenoid UI. 
+
+### Running up Zalenium
+
+Take a look at [Zalenium docs](https://github.com/zalando/zalenium) and install Zalenium.
+
+However, to make you buy time, you'll only need run these three steps:
+
+    # Pull docker-selenium
+    docker pull elgalu/selenium
+
+    # Pull Zalenium
+    docker pull dosel/zalenium
+
+    sudo docker run --rm -ti --name zalenium -p 4444:4444 \
+        -v /var/run/docker.sock:/var/run/docker.sock \
+        -v /tmp/videos:/home/seluser/videos \
+        --privileged dosel/zalenium start
+
+Now, proceed at `localhost:4444` and you'll see Selenium Grid Hub up. 
