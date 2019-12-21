@@ -3,7 +3,7 @@ from tigre.core import Tigre
 from importlib import import_module
 from re import match, split
 
-browsers_regex = r'(firefox|chrome|opera)\d{,2}?'
+browsers_regex = r'(firefox|chrome|opera|safari)\d{,2}?'
 
 
 def __getattr__(attr: str) -> Union[Tigre, ImportError]:
