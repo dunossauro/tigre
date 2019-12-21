@@ -17,3 +17,9 @@ class opera(Tigre):
     def __init__(self):
         super().__init__()
         self._fixed_caps = {"browserName": "opera"}
+
+
+class safari(Tigre):
+    def __init__(self):
+        super().__init__()
+        self._fixed_caps = {"browserName": "safari"}
