@@ -1,12 +1,8 @@
-from abc import abstractmethod, abstractproperty, ABC
+from abc import abstractmethod, ABC
 
 
 class Builder(ABC):
     """Builder interface."""
-
-    # @abstractproperty
-    # def capabilities(self):
-    #     ...
 
     @abstractmethod
     def build(self):

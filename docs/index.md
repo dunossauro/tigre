@@ -1,13 +1,12 @@
 # Tigre
 
-Tiger was born to ease the confusing calls of selenium webdriver.
+Tigre was born to ease the confusing calls of selenium webdriver.
 
-If you have problems with different APIs for calling remote, local or mobile browsers. If you are confused by so many different capabilities settings or have trouble with hard-to-maintain code. Tiger was designed especially for you.
-
+If you have problems with different APIs for calling remote, local or mobile browsers, or if you are confused by so many different capabilities settings or have trouble with hard-to-maintain code, Tigre was designed especially for you.
 
 ## Get started
 
-### tigre instalation
+### Tigre installation
 
 `#TODO`
 
