@@ -30,3 +30,9 @@ class TestRemoteModuleImports(TestCase):
         from tigre.remote import opera
 
         self.assertEqual(opera.capabilities, {'browserName': 'opera'})
+
+
+    def test_should_import_safari(self):
+        from tigre.remote import safari
+
+        self.assertEqual(safari.capabilities, {'browserName': 'safari'})

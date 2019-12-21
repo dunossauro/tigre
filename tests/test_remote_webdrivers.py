@@ -1,5 +1,5 @@
 from unittest import TestCase
-from tigre.remote.webdrivers import firefox, chrome, opera
+from tigre.remote.webdrivers import firefox, chrome, opera, safari
 
 
 class TestFirefoxCapabilities(TestCase):
@@ -24,3 +24,11 @@ class TestChromeCapabilities(TestCase):
 
     def test_should_has_version_capability(self):
         self.assertEqual(self.browser.capabilities, {"browserName": "chrome"})
+
+
+class TestSafariCapabilities(TestCase):
+    def setUp(self):
+        self.browser = safari()
+
+    def test_should_has_version_capability(self):
+        self.assertEqual(self.browser.capabilities, {"browserName": "safari"})
