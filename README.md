@@ -36,7 +36,7 @@ Tigre is a helper to instantiate your [selenium webdriver](https://selenium.dev/
   - [x] standalone
   - [x] docker-selenium
   - [x] selenoid
-  - [ ] zalenium
+  - [x] zalenium
   - [ ] Authentication :fire:
 
 - Webdriver features
