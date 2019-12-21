@@ -57,7 +57,7 @@ This command will install (or update) all pyproject.toml dependencies inside a v
 
 With Docker initialized you can follow one of these steps below.
 
-### Running up Selenium Grid 
+### Running up Selenium Grid
 
 Go to `docker_test_images` folder and using Docker and docker-compose you can run the test image with the following command:
 
@@ -75,9 +75,9 @@ After installing, run
 
 To use Selenoid UI, also run
 
-    ./cm selenoid-ui start 
+    ./cm selenoid-ui start
 
-Now, open a browser in `localhost:8080` and you'll see Selenoid UI. 
+Now, open a browser in `localhost:8080` and you'll see Selenoid UI.
 
 ### Running up Zalenium
 
@@ -96,4 +96,18 @@ However, to make you buy time, you'll only need run these three steps:
         -v /tmp/videos:/home/seluser/videos \
         --privileged dosel/zalenium start
 
-Now, proceed at `localhost:4444` and you'll see Selenium Grid Hub up. 
+Now, proceed at `localhost:4444` and you'll see Selenium Grid Hub up.
+
+
+## Registering a node into the hub
+
+To register a node on selenium hub, you will need to download and install [Java
+SE Development Kit](https://www.oracle.com/technetwork/java/javase/downloads/jdk13-downloads-5672538.html)
+
+After installing Java SE you have to download [selenium-server-standalone](https://selenium.dev/downloads/) and move the file for the active working directory.
+
+After that you need to have sure you're running the Selenium Hub on port 4444, and then run this command, it will register a node into your Selenium Hub:
+
+```
+java -jar selenium-server-standalone-<version>.jar -role node -hubHost localhost -hubPort 4444
+```
