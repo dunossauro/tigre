@@ -8,9 +8,9 @@ browsers_regex = r'(firefox|chrome|opera|safari)\d{,2}?'
 
 def __getattr__(attr: str) -> Union[Tigre, ImportError]:
     if match(browsers_regex, attr):
-        *_, browser, version = split(browsers_regex, attr)
+        *_, browser_name, version = split(browsers_regex, attr)
         webdriver = import_module('tigre.remote.webdrivers')
-        browser = getattr(webdriver, browser)
+        browser = getattr(webdriver, browser_name)
         return browser().version(version) if version else browser()
 
     raise ImportError(f"cannot import name '{attr}' from 'tigre.remote'")

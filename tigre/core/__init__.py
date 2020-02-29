@@ -1,5 +1,5 @@
 """Tigre."""
-from typing import Any, Callable, Union
+from typing import Any, Callable, Dict, Union
 from selenium import webdriver
 from tigre.core import config
 from tigre.core.meta import Builder
@@ -11,8 +11,8 @@ class Tigre(Builder):
 
     def __init__(self, default_caps: list = CAPABILITIES):
         self._default_caps = default_caps
-        self._caps = {}
-        self._fixed_caps = {}
+        self._caps: Dict[str, str] = {}
+        self._fixed_caps: Dict[Any, Any] = {}
 
     @property
     def capabilities(self):
