@@ -13,7 +13,7 @@ Tigre is a helper to instantiate your [selenium webdriver](https://selenium.dev/
   - grid ([see file](./docker_test_images))
     - chrome
     - firefox
-  - stadalone
+  - standalone
     - chrome (standalone-chrome:3.141.59-xenon)
     - firefox (selenium/standalone-firefox:3.141.59-xenon)
 
