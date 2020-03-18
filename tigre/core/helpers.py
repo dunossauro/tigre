@@ -6,6 +6,7 @@ _converted_capabilities = {
     'video': 'enableVideo',
     'resolution': 'screenResolution',
     'platform': 'platformName',
+    'insecure': 'acceptInsecureCerts',
 }
 
 CAPABILITIES = _converted_capabilities.values()
