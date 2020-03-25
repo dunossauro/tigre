@@ -1,14 +1,12 @@
 # Tigre
 
-Tigre was born to ease the confusing calls of selenium webdriver.
+Welcome to Tigres's documentation. Get started with [Installation](./installation.md) and then get an overview with the [Quickstart](./quickstart.md).
 
-If you have problems with different APIs for calling remote, local or mobile browsers, or if you are confused by so many different capabilities settings or have trouble with hard-to-maintain code, Tigre was designed especially for you.
+## Summary
 
-## Get started
-
-### Tigre installation
-
-`#TODO`
+- [Purpose and motivation]()
+- [Installation](./installation.md)
+- [Quickstart](./quickstart.md)
 
 #### Definition enabling vnc and video recorder on firefox
 ```Python

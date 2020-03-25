@@ -2,6 +2,24 @@ site_name: Tigre
 
 theme:
   name: 'material'
+
+repo_name: dunossauro/tigre
+repo_url: https://github.com/dunossauro/tigre
+
+nav:
+    - Tigre: 'index.md'
+    - Purpose and motivation: 'purpose.md'
+    - Installation: 'installation.md'
+    - QuickStart: 'quickstart.md'
+    - Development guide:
+      - Welcome: 'development/welcome.md'
+      - Python environment: 'development/python.md'
+      - Docker configuration: 'development/docker.md'
+      - Seleium grid configuration: 'development/selenium.md'
+      - Appium configuration: 'development/appium.md'
+      - Selenoid configuration: 'development/selenoid.md'
+      - Zalenium configuration: 'development/zalenium.md'
+
 markdown_extensions:
   - markdown.extensions.codehilite:
       guess_lang: false
