@@ -1,4 +1,4 @@
-## Running up Selenium Grid
+## [Running up Selenium Grid](#running-up-selenium-grid)
 
 Go to `docker_test_images` folder and using Docker and docker-compose you can run the test image with the following command:
 
@@ -7,7 +7,7 @@ Go to `docker_test_images` folder and using Docker and docker-compose you can ru
 Open a browser and go to `localhost:4444` to see if Selenium Grid Console is correctly up.
 
 
-## Registering a node into the hub
+## [Registering a node into the hub](#registering-a-node-into-the-hub)
 
 To register a node on selenium hub, you will need to download and install [Java
 SE Development Kit](https://www.oracle.com/technetwork/java/javase/downloads/jdk13-downloads-5672538.html)

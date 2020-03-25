@@ -1,4 +1,4 @@
-### Running up Zalenium
+### [Running up Zalenium](#running-up-zalenium)
 
 Take a look at [Zalenium docs](https://github.com/zalando/zalenium) and install Zalenium.
 
