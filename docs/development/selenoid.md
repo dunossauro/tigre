@@ -1,4 +1,4 @@
-### Running up Selenoid
+### [Running up Selenoid](#running-up-selenoid)
 
 First, install Selenoid following the [oficial docs](https://aerokube.com/selenoid/latest/).
 
