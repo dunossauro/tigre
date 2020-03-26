@@ -15,7 +15,7 @@ nav:
       - Welcome: 'development/welcome.md'
       - Python environment: 'development/python.md'
       - Docker configuration: 'development/docker.md'
-      - Seleium grid configuration: 'development/selenium.md'
+      - Selenium grid configuration: 'development/selenium.md'
       - Appium configuration: 'development/appium.md'
       - Selenoid configuration: 'development/selenoid.md'
       - Zalenium configuration: 'development/zalenium.md'
